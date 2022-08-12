@@ -1,10 +1,15 @@
 import type { NextPage } from 'next';
 import Layout from '../components/Layout';
+import Head from 'next/head';
 
 const Home: NextPage = () => {
   return (
     <Layout>
-      <div className="my-4 px-12 min-h-screen">
+      <Head>
+        <title>Asistente - Inicio</title>
+        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+      </Head>
+      <div className="py-4 px-12 min-h-screen">
         <div>
           Index
         </div>
