@@ -22,15 +22,16 @@ const Steps = ({ steps, currentStep }: StepsProps) => {
             const dynamicClasses = `${(currentStep >= value.order) ? 'border-indigo-500 text-white' : ''} ${currentStep === value.order ? 'font-bold text-indigo-500' : ''} ${currentStep > value.order ? 'bg-indigo-300 font-semibold bg-indigo-500' : ''} ${currentStep < value.order ? 'text-gray-500' : ''}`;
             const separatorDynamicClasses = `${currentStep > value.order ? 'bg-indigo-500' : 'bg-gray-200'}`;
             return (
-            <Fragment key={index}>
-              <div
-                className={`${className} ${dynamicClasses}`}
-              >
-                <span>{value.order}</span>
-              </div>
-              <StepSeparator stepsLength={stepsLength} index={index} dynamicClasses={separatorDynamicClasses} />
-            </Fragment>
-          )})
+              <Fragment key={index}>
+                <div
+                  className={`${className} ${dynamicClasses}`}
+                >
+                  <span>{value.order}</span>
+                </div>
+                <StepSeparator stepsLength={stepsLength} index={index} dynamicClasses={separatorDynamicClasses} />
+              </Fragment>
+            );
+          })
         }
     </div>
   );
