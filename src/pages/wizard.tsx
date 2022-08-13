@@ -4,6 +4,7 @@ import Head from 'next/head';
 import Layout from '../components/Layout';
 import Input from '../components/Form/Input';
 import TextArea from '../components/Form/TextArea';
+import Button from '../components/Form/Button';
 import Steps from '../components/Steps';
 
 const Wizard: NextPage = () => {
@@ -18,6 +19,9 @@ const Wizard: NextPage = () => {
     setCurrentStepState(currentStepState + 1);
   };
   const previousStep = () => setCurrentStepState(currentStepState - 1);
+  const isVisiblePreviousButton = currentStepState > 1;
+  const isVisibleNextButton = currentStepState <= steps.length;
+  const isLastStep = currentStepState === steps.length;
   return (
     <Layout>
       <Head>
@@ -72,19 +76,23 @@ const Wizard: NextPage = () => {
                   </div>
                 </div>
                 <div className="px-4 py-3 bg-gray-50 text-right sm:px-6 flex justify-between">
-                  <button
-                    type="button"
-                    onClick={previousStep}
-                    className="inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
-                  >
-                    Anterior
-                  </button>
-                  <button
-                    type="submit"
-                    className="inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
-                  >
-                    Siguiente
-                  </button>
+                  {
+                    <Button
+                      label='Anterior'
+                      type={'button'}
+                      disabled={!isVisiblePreviousButton}
+                      dynamicClasses={isVisiblePreviousButton ? 'visible' : 'invisible'}
+                      onClick={previousStep}
+                    />
+                  }
+                  {
+                    <Button
+                      label={isLastStep ? 'Finalizar' : 'Siguiente'}
+                      type={'submit'}
+                      disabled={!isVisibleNextButton}
+                      dynamicClasses={isVisibleNextButton ? 'visible' : 'invisible'}
+                    />
+                  }
                 </div>
               </div>
             </form>
