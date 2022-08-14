@@ -1,4 +1,6 @@
 import React, { Fragment } from 'react';
+import { useContext } from "react";
+import { WizardContext } from '../context/WizardContext';
 import StepSeparator from '../components/Steps/StepSeparator';
 
 interface Step {
@@ -8,12 +10,12 @@ interface Step {
 
 type StepsProps = {
   steps: Step[],
-  currentStep: number
 };
 
-const Steps = ({ steps, currentStep }: StepsProps) => {
+const Steps = ({ steps }: StepsProps) => {
   steps.sort(((a, b) => a.order - b.order));
   const stepsLength:number = steps.length - 1;
+  const { currentStep } = useContext(WizardContext);
   return (
     <div className='flex flex-column justify-center items-center'>
         {
