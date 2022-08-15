@@ -17,7 +17,7 @@ const Steps = ({ steps }: StepsProps) => {
   const stepsLength:number = steps.length - 1;
   const { currentStep } = useContext(WizardContext);
   return (
-    <div className='flex flex-column justify-center items-center px-4 py-6'>
+    <div className='flex flex-column justify-center items-center px-4 pb-6'>
         {
           steps?.map((value, index:number) => {
             const className = 'rounded-full border w-10 h-10 flex flex-column justify-center items-center';

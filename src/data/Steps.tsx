@@ -22,7 +22,7 @@ export default [
             {
                 label: 'Describe como sería tu trabajo ideal',
                 type: 'textarea',
-                rows: 3,
+                rows: 5,
                 name: 'idealJob',
                 id: 'idealJob',
                 placeholder: 'Ejemplo: Mi trabajo ideal está en un ambiente retador, en donde pueda asumir mayor responsabilidad ...',

@@ -12,17 +12,20 @@ interface FormProps {
 };
 
 const Form = ({ title, order, fields, stepsLength }: FormProps) => {
+
     const { currentStep, setCurrentStep } = useContext(WizardContext);
     const isVisiblePreviousButton = currentStep > 1;
     const isVisibleNextButton = currentStep <= stepsLength;
     const isLastStep = currentStep === stepsLength;
+
     const nextStep = (e:FormEvent<HTMLFormElement>) => {
         e.preventDefault();
         setCurrentStep(currentStep + 1);
     };
     const previousStep = () => setCurrentStep(currentStep - 1);
+
     return(
-        <div className={`px-4 py-6 ${currentStep === order ? 'block' : 'hidden'}`}>
+        <div className={`px-4 pt-6 ${currentStep === order ? 'block' : 'hidden'}`}>
             <form onSubmit={nextStep}>
                 <div className="shadow sm:rounded-md sm:overflow-hidden">
                     <div className="px-4 py-5 bg-white space-y-6 sm:p-6">
@@ -62,21 +65,21 @@ const Form = ({ title, order, fields, stepsLength }: FormProps) => {
                     </div>
                     <div className="px-4 py-3 bg-gray-50 text-right sm:px-6 flex justify-between">
                         {
-                        <Button
-                            label='Anterior'
-                            type={'button'}
-                            disabled={!isVisiblePreviousButton}
-                            dynamicClasses={isVisiblePreviousButton ? 'visible' : 'invisible'}
-                            onClick={previousStep}
-                        />
+                            <Button
+                                label='Anterior'
+                                type={'button'}
+                                disabled={!isVisiblePreviousButton}
+                                dynamicClasses={isVisiblePreviousButton ? 'visible' : 'invisible'}
+                                onClick={previousStep}
+                            />
                         }
                         {
-                        <Button
-                            label={isLastStep ? 'Finalizar' : 'Siguiente'}
-                            type={'submit'}
-                            disabled={!isVisibleNextButton}
-                            dynamicClasses={isVisibleNextButton ? 'visible' : 'invisible'}
-                        />
+                            <Button
+                                label={isLastStep ? 'Finalizar' : 'Siguiente'}
+                                type={'submit'}
+                                disabled={!isVisibleNextButton}
+                                dynamicClasses={isVisibleNextButton ? 'visible' : 'invisible'}
+                            />
                         }
                     </div>
                 </div>

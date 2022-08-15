@@ -14,9 +14,9 @@ const Wizard: NextPage = () => {
         <title>Asistente - Postulación</title>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       </Head>
-      <div className="py-4 px-12 min-h-screen bg-gray-50">
+      <div className="py-4 px-12 bg-gray-50 flex flex-column justify-center items-center">
         <WizardContextProvider>
-          <div className='w-6/12 mx-auto'>
+          <div className='w-6/12 mx-auto py-12'>
             <Steps
               steps={steps}
             />

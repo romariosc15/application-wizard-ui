@@ -26,9 +26,6 @@ const TextArea = ({ label, rows, name, id, placeholder, required }: TextAreaProp
                 required={required}
             />
         </div>
-        <p className="mt-2 text-sm text-gray-500">
-            Brief description for your profile. URLs are hyperlinked.
-        </p>
     </>
   );
 };
