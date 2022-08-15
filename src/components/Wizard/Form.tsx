@@ -3,6 +3,7 @@ import { WizardContext } from '../../context/WizardContext';
 import Input from '../Form/Input';
 import TextArea from '../Form/TextArea';
 import Button from '../Form/Button';
+import Radio from '../Form/Radio';
 
 interface FormProps {
     title: string,
@@ -30,34 +31,48 @@ const Form = ({ title, order, fields, stepsLength }: FormProps) => {
                 <div className="shadow sm:rounded-md sm:overflow-hidden">
                     <div className="px-4 py-5 bg-white space-y-6 sm:p-6">
                         <h2 className="text-2xl font-bold">{title}</h2>
-                        <div className="grid grid-cols-4 gap-6">
+                        <div className="grid grid-cols-12 gap-6">
                             {
                                 fields?.map((value, index:number) => {
-                                    if(value.type === 'text')
+                                    if(value.type === 'text' || value.type === 'url' || value.type === 'tel' || value.type === 'number')
                                         return (
-                                            <div className="col-span-3 sm:col-span-2" key={index}>
-                                                <Input
-                                                    label={value.label}
-                                                    type={value.type}
-                                                    name={value.name}
-                                                    id={value.id}
-                                                    placeholder={value.placeholder}
-                                                    required={value.required}
-                                                />
-                                            </div>
+                                            <Input
+                                                key={index}
+                                                label={value.label}
+                                                type={value.type}
+                                                name={value.name}
+                                                id={value.id}
+                                                placeholder={value.placeholder}
+                                                required={value.required}
+                                                containerClasses={value.containerClasses}
+                                                pattern={value.pattern}
+                                            />
                                         );
                                     if(value.type === 'textarea')
                                         return (
-                                            <div className="col-span-4" key={index}>
-                                                <TextArea 
-                                                    label={value.label}
-                                                    rows={value.rows}
-                                                    name={value.name}
-                                                    id={value.id}
-                                                    placeholder={value.placeholder}
-                                                    required={value.required}
-                                                />
-                                            </div>
+                                            <TextArea
+                                                key={index}
+                                                label={value.label}
+                                                rows={value.rows}
+                                                name={value.name}
+                                                id={value.id}
+                                                placeholder={value.placeholder}
+                                                required={value.required}
+                                                containerClasses={value.containerClasses}
+                                            />
+                                        );
+                                    if(value.type === 'radio')
+                                        return (
+                                            <Radio
+                                                key={index}
+                                                label={value.label}
+                                                description={value.description}
+                                                name={value.name}
+                                                id={value.id}
+                                                required={value.required}
+                                                containerClasses={value.containerClasses}
+                                                options={value.options}
+                                            />
                                         );
                                 })
                             }

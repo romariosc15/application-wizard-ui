@@ -9,7 +9,8 @@ export default [
                 name:'firstName',
                 id:'firstName',
                 placeholder:'Ingresa tus nombres',
-                required:true
+                required:true,
+                containerClasses: 'col-span-6'
             },
             {
                 label: 'Apellidos',
@@ -17,16 +18,60 @@ export default [
                 name: 'lastName',
                 id: 'lastName',
                 placeholder: 'Ingresa tus apellidos',
+                required: true,
+                containerClasses: 'col-span-6'
+            },
+            {
+                label: 'Linkedin',
+                type: 'url',
+                name: 'linkedin',
+                id: 'linkedin',
+                placeholder: 'Ingresa la URL de tu perfil de LinkedIn',
+                containerClasses: 'col-span-6'
+            },
+            {
+                label: 'GitHub',
+                type: 'url',
+                name: 'github',
+                id: 'github',
+                placeholder: 'Ingresa la URL de tu perfil de GitHub',
+                containerClasses: 'col-span-6'
+            },
+            {
+                label: 'País',
+                type: 'text',
+                name: 'country',
+                id: 'country',
+                placeholder: 'Nombre del país en el que vives',
+                containerClasses: 'col-span-4',
                 required: true
             },
             {
-                label: 'Describe como sería tu trabajo ideal',
-                type: 'textarea',
-                rows: 5,
-                name: 'idealJob',
-                id: 'idealJob',
-                placeholder: 'Ejemplo: Mi trabajo ideal está en un ambiente retador, en donde pueda asumir mayor responsabilidad ...',
+                label: 'Ciudad',
+                type: 'text',
+                name: 'city',
+                id: 'city',
+                placeholder: 'Nombre de la ciudad en la que vives',
+                containerClasses: 'col-span-4',
                 required: true
+            },
+            {
+                label: 'Celular',
+                type: 'tel',
+                name: 'phoneNumber',
+                id: 'phoneNumber',
+                placeholder: 'Número de celular',
+                containerClasses: 'col-span-4',
+                pattern: '[0-9]{9}'
+            },
+            {
+                label: 'Cuentanos algo adicional sobre ti',
+                type: 'textarea',
+                rows: 4,
+                name: 'aboutYou',
+                id: 'aboutYou',
+                placeholder: 'Ejemplo: Realizo voluntariado en una asociación sin fines de lucro ...',
+                containerClasses: 'col-span-12'
             }
         ],
     }, 
@@ -40,13 +85,89 @@ export default [
                 name:'heading',
                 id:'heading',
                 placeholder:'Ejemplo: Frontend Developer y amante de la lectura',
-                required:true
+                required:true,
+                containerClasses: 'col-span-6'
+            },
+            {
+                label:'Años de experiencia',
+                type:'number',
+                name:'experienceYears',
+                id:'experienceYears',
+                placeholder:'00',
+                required:true,
+                containerClasses: 'col-span-3'
+            },
+            {
+                label:'¿Estás trabajando actualmente en algún proyecto personal? Comentanos sobre ello',
+                type:'textarea',
+                rows: 4,
+                name:'personalProject',
+                id:'personalProject',
+                placeholder:'Ejemplo: Estoy desarrollando una aplicación para la gestión de formularios de ...',
+                containerClasses: 'col-span-12'
+            },
+            {
+                label:'Comentanos qué aprendiste en los últimos 3 meses',
+                type:'textarea',
+                rows: 4,
+                name:'yourLearning',
+                id:'yourLearning',
+                placeholder:'Ejemplo: He terminado un curso de Unit Testing con Jest para aplicaciones en React ...',
+                containerClasses: 'col-span-12'
+            },
+            {
+                label: 'Describe tu trabajo ideal',
+                type: 'textarea',
+                rows: 4,
+                name: 'idealJob',
+                id: 'idealJob',
+                placeholder: 'Ejemplo: Mi trabajo ideal está en un ambiente retador, en donde pueda asumir mayor responsabilidad ...',
+                containerClasses: 'col-span-12'
             }
         ]
     }, 
     {
-        title: 'Formación',
+        title: 'Complementario',
         order: 3,
-        fields: []
+        fields: [
+            {
+                label: '¿Puede mantener una conversación en inglés?',
+                description: 'Es requerido tener un nivel B1 en adelante',
+                type: 'radio',
+                name: 'isEnglishSpeaker',
+                id: 'isEnglishSpeaker',
+                required: true,
+                containerClasses: 'col-span-12',
+                options: [
+                    {label: 'Si', value: 'yes'},
+                    {label: 'No', value: 'no'}
+                ]
+            },
+            {
+                label: '¿Está autorizado para trabajar en Estados Unidos?',
+                type: 'radio',
+                name: 'isUsaWorkPermit',
+                id: 'isUsaWorkPermit',
+                required: true,
+                containerClasses: 'col-span-12',
+                options: [
+                    {label: 'Si', value: 'yes'},
+                    {label: 'No', value: 'no'}
+                ]
+            },
+            {
+                label: '¿Tiene experiencia trabajando con equipos de personas de distintas partes del mundo?',
+                description: 'Se trabaja mucho con personas de Norteamérica y de Latinoamérica',
+                type: 'radio',
+                name: 'isMulticultural',
+                id: 'isMulticultural',
+                required: true,
+                containerClasses: 'col-span-12',
+                options: [
+                    {label: 'Si', value: 'yes'},
+                    {label: 'No', value: 'no'}
+                ]
+            },
+        ]
     }
 ];
