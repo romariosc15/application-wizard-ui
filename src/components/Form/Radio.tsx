@@ -1,4 +1,5 @@
 import React from 'react';
+import InputLayout from '../Form/InputLayout';
 
 type RadioProps = {
     label: string,
@@ -13,7 +14,7 @@ type RadioProps = {
 
 const Input = ({ label, description, name, id, required, dynamicClasses, columns, options }: RadioProps) => {
     return (
-        <div className="w-full">
+        <InputLayout columns={columns}>
             <fieldset>
                 <legend className="contents text-base font-medium text-gray-900">{label}</legend>
                 <p className="text-sm text-gray-500">{description}</p>
@@ -37,7 +38,7 @@ const Input = ({ label, description, name, id, required, dynamicClasses, columns
                     }
                 </div>
             </fieldset>
-        </div>
+        </InputLayout>
     );
 };
 

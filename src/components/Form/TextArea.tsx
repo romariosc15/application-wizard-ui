@@ -1,4 +1,5 @@
 import React from 'react';
+import InputLayout from '../Form/InputLayout';
 
 type TextAreaProps = {
     label: string,
@@ -13,7 +14,7 @@ type TextAreaProps = {
 
 const TextArea = ({ label, rows, name, id, placeholder, required, dynamicClasses, columns }: TextAreaProps) => {
     return (
-        <div className="w-100">
+        <InputLayout columns={columns}>
             <label htmlFor="about" className="block text-sm font-medium text-gray-700">
                 {label}
             </label>
@@ -28,7 +29,7 @@ const TextArea = ({ label, rows, name, id, placeholder, required, dynamicClasses
                     required={required}
                 />
             </div>
-        </div>
+        </InputLayout>
     );
 };
 

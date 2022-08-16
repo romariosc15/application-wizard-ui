@@ -1,5 +1,6 @@
 import React from 'react';
-
+import InputLayout from '../Form/InputLayout';
+    
 type InputProps = {
     label: string,
     type: string,
@@ -9,13 +10,12 @@ type InputProps = {
     required: boolean,
     dynamicClasses?: string,
     columns: number,
-    pattern?: string,
-    containerClasses: string
+    pattern?: string
 };
 
-const Input = ({ label, type, name, id, placeholder, required, dynamicClasses, columns, pattern, containerClasses }: InputProps) => {
+const Input = ({ label, type, name, id, placeholder, required, dynamicClasses, columns, pattern }: InputProps) => {
     return (
-        <div className={`inline-block px-2 pb-4 ${containerClasses}`}>
+        <InputLayout columns={columns}>
             <label htmlFor={id} className="block text-sm font-medium text-gray-700">
                 {label}
             </label>
@@ -30,7 +30,7 @@ const Input = ({ label, type, name, id, placeholder, required, dynamicClasses, c
                     pattern={pattern}
                 />
             </div>
-        </div>
+        </InputLayout>
     );
 };
 
