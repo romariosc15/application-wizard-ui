@@ -6,7 +6,6 @@ interface WizardContextInterface {
 };
 
 const defaultState = {
-  stepsLength: 0,
   currentStep: 1
 };
 

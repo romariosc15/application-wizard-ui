@@ -44,7 +44,7 @@ const Form = ({ title, order, fields, stepsLength }: FormProps) => {
                                                 id={value.id}
                                                 placeholder={value.placeholder}
                                                 required={value.required}
-                                                containerClasses={value.containerClasses}
+                                                columns={value.columns}
                                                 pattern={value.pattern}
                                             />
                                         );
@@ -58,7 +58,7 @@ const Form = ({ title, order, fields, stepsLength }: FormProps) => {
                                                 id={value.id}
                                                 placeholder={value.placeholder}
                                                 required={value.required}
-                                                containerClasses={value.containerClasses}
+                                                columns={value.columns}
                                             />
                                         );
                                     if(value.type === 'radio')
@@ -70,7 +70,7 @@ const Form = ({ title, order, fields, stepsLength }: FormProps) => {
                                                 name={value.name}
                                                 id={value.id}
                                                 required={value.required}
-                                                containerClasses={value.containerClasses}
+                                                columns={value.columns}
                                                 options={value.options}
                                             />
                                         );

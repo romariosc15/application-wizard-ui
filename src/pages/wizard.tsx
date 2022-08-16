@@ -4,6 +4,7 @@ import Head from 'next/head';
 import Layout from '../components/Layout';
 import Steps from '../components/Steps';
 import WizardForm from '../components/Wizard/Form';
+import WizardSuccess from '../components/Wizard/Success';
 import DataSteps from '../data/Steps';
 
 const Wizard: NextPage = () => {
@@ -16,7 +17,7 @@ const Wizard: NextPage = () => {
       </Head>
       <div className="py-4 px-12 bg-gray-50 flex flex-column justify-center items-center">
         <WizardContextProvider>
-          <div className='w-6/12 mx-auto py-12'>
+          <div className='w-6/12 mx-auto py-16'>
             <Steps
               steps={steps}
             />
@@ -34,6 +35,9 @@ const Wizard: NextPage = () => {
                 ))
               }
             </>
+            <WizardSuccess
+              stepsLength={steps.length}
+            />
           </div>
 
         </WizardContextProvider>

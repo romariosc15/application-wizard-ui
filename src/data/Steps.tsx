@@ -10,7 +10,7 @@ export default [
                 id:'firstName',
                 placeholder:'Ingresa tus nombres',
                 required:true,
-                containerClasses: 'col-span-6'
+                columns: 6
             },
             {
                 label: 'Apellidos',
@@ -19,7 +19,7 @@ export default [
                 id: 'lastName',
                 placeholder: 'Ingresa tus apellidos',
                 required: true,
-                containerClasses: 'col-span-6'
+                columns: 6
             },
             {
                 label: 'Linkedin',
@@ -27,7 +27,7 @@ export default [
                 name: 'linkedin',
                 id: 'linkedin',
                 placeholder: 'Ingresa la URL de tu perfil de LinkedIn',
-                containerClasses: 'col-span-6'
+                columns: 6
             },
             {
                 label: 'GitHub',
@@ -35,7 +35,7 @@ export default [
                 name: 'github',
                 id: 'github',
                 placeholder: 'Ingresa la URL de tu perfil de GitHub',
-                containerClasses: 'col-span-6'
+                columns: 6
             },
             {
                 label: 'País',
@@ -43,7 +43,7 @@ export default [
                 name: 'country',
                 id: 'country',
                 placeholder: 'Nombre del país en el que vives',
-                containerClasses: 'col-span-4',
+                columns: 4,
                 required: true
             },
             {
@@ -52,7 +52,7 @@ export default [
                 name: 'city',
                 id: 'city',
                 placeholder: 'Nombre de la ciudad en la que vives',
-                containerClasses: 'col-span-4',
+                columns: 4,
                 required: true
             },
             {
@@ -61,7 +61,7 @@ export default [
                 name: 'phoneNumber',
                 id: 'phoneNumber',
                 placeholder: 'Número de celular',
-                containerClasses: 'col-span-4',
+                columns: 4,
                 pattern: '[0-9]{9}'
             },
             {
@@ -71,7 +71,7 @@ export default [
                 name: 'aboutYou',
                 id: 'aboutYou',
                 placeholder: 'Ejemplo: Realizo voluntariado en una asociación sin fines de lucro ...',
-                containerClasses: 'col-span-12'
+                columns: 12
             }
         ],
     }, 
@@ -86,7 +86,7 @@ export default [
                 id:'heading',
                 placeholder:'Ejemplo: Frontend Developer y amante de la lectura',
                 required:true,
-                containerClasses: 'col-span-6'
+                columns: 6
             },
             {
                 label:'Años de experiencia',
@@ -95,7 +95,7 @@ export default [
                 id:'experienceYears',
                 placeholder:'00',
                 required:true,
-                containerClasses: 'col-span-3'
+                columns: 3
             },
             {
                 label:'¿Estás trabajando actualmente en algún proyecto personal? Comentanos sobre ello',
@@ -104,7 +104,7 @@ export default [
                 name:'personalProject',
                 id:'personalProject',
                 placeholder:'Ejemplo: Estoy desarrollando una aplicación para la gestión de formularios de ...',
-                containerClasses: 'col-span-12'
+                columns: 12
             },
             {
                 label:'Comentanos qué aprendiste en los últimos 3 meses',
@@ -113,7 +113,7 @@ export default [
                 name:'yourLearning',
                 id:'yourLearning',
                 placeholder:'Ejemplo: He terminado un curso de Unit Testing con Jest para aplicaciones en React ...',
-                containerClasses: 'col-span-12'
+                columns: 12
             },
             {
                 label: 'Describe tu trabajo ideal',
@@ -122,7 +122,7 @@ export default [
                 name: 'idealJob',
                 id: 'idealJob',
                 placeholder: 'Ejemplo: Mi trabajo ideal está en un ambiente retador, en donde pueda asumir mayor responsabilidad ...',
-                containerClasses: 'col-span-12'
+                columns: 12
             }
         ]
     }, 
@@ -137,7 +137,7 @@ export default [
                 name: 'isEnglishSpeaker',
                 id: 'isEnglishSpeaker',
                 required: true,
-                containerClasses: 'col-span-12',
+                columns: 12,
                 options: [
                     {label: 'Si', value: 'yes'},
                     {label: 'No', value: 'no'}
@@ -149,7 +149,7 @@ export default [
                 name: 'isUsaWorkPermit',
                 id: 'isUsaWorkPermit',
                 required: true,
-                containerClasses: 'col-span-12',
+                columns: 12,
                 options: [
                     {label: 'Si', value: 'yes'},
                     {label: 'No', value: 'no'}
@@ -162,7 +162,7 @@ export default [
                 name: 'isMulticultural',
                 id: 'isMulticultural',
                 required: true,
-                containerClasses: 'col-span-12',
+                columns: 12,
                 options: [
                     {label: 'Si', value: 'yes'},
                     {label: 'No', value: 'no'}
