@@ -100,7 +100,7 @@ export default [
             {
                 label:'¿Estás trabajando actualmente en algún proyecto personal? Comentanos sobre ello',
                 type:'textarea',
-                rows: 4,
+                rows: 3,
                 name:'personalProject',
                 id:'personalProject',
                 placeholder:'Ejemplo: Estoy desarrollando una aplicación para la gestión de formularios de ...',
@@ -109,7 +109,7 @@ export default [
             {
                 label:'Comentanos qué aprendiste en los últimos 3 meses',
                 type:'textarea',
-                rows: 4,
+                rows: 3,
                 name:'yourLearning',
                 id:'yourLearning',
                 placeholder:'Ejemplo: He terminado un curso de Unit Testing con Jest para aplicaciones en React ...',
@@ -118,7 +118,7 @@ export default [
             {
                 label: 'Describe tu trabajo ideal',
                 type: 'textarea',
-                rows: 4,
+                rows: 3,
                 name: 'idealJob',
                 id: 'idealJob',
                 placeholder: 'Ejemplo: Mi trabajo ideal está en un ambiente retador, en donde pueda asumir mayor responsabilidad ...',
