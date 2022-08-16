@@ -1,5 +1,4 @@
 import React from 'react';
-import { getColspan } from '../../helpers/classes';
 
 type TextAreaProps = {
     label: string,
@@ -13,9 +12,8 @@ type TextAreaProps = {
 };
 
 const TextArea = ({ label, rows, name, id, placeholder, required, dynamicClasses, columns }: TextAreaProps) => {
-    const containerClasses = getColspan(columns);
     return (
-        <div className={containerClasses}>
+        <div className="w-100">
             <label htmlFor="about" className="block text-sm font-medium text-gray-700">
                 {label}
             </label>

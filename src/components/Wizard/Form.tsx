@@ -31,7 +31,7 @@ const Form = ({ title, order, fields, stepsLength }: FormProps) => {
                 <div className="shadow sm:rounded-md sm:overflow-hidden">
                     <div className="px-4 py-5 bg-white space-y-6 sm:p-6">
                         <h2 className="text-2xl font-bold">{title}</h2>
-                        <div className="grid grid-cols-12 gap-6">
+                        <div className="">
                             {
                                 fields?.map((value, index:number) => {
                                     if(value.type === 'text' || value.type === 'url' || value.type === 'tel' || value.type === 'number')
@@ -46,6 +46,7 @@ const Form = ({ title, order, fields, stepsLength }: FormProps) => {
                                                 required={value.required}
                                                 columns={value.columns}
                                                 pattern={value.pattern}
+                                                containerClasses={value.containerClasses}
                                             />
                                         );
                                     if(value.type === 'textarea')

@@ -10,7 +10,8 @@ export default [
                 id:'firstName',
                 placeholder:'Ingresa tus nombres',
                 required:true,
-                columns: 6
+                columns: 6,
+                containerClasses: 'w-6/12'
             },
             {
                 label: 'Apellidos',
@@ -19,7 +20,8 @@ export default [
                 id: 'lastName',
                 placeholder: 'Ingresa tus apellidos',
                 required: true,
-                columns: 6
+                columns: 6,
+                containerClasses: 'w-6/12'
             },
             {
                 label: 'Linkedin',
@@ -27,7 +29,8 @@ export default [
                 name: 'linkedin',
                 id: 'linkedin',
                 placeholder: 'Ingresa la URL de tu perfil de LinkedIn',
-                columns: 6
+                columns: 6,
+                containerClasses: 'w-6/12'
             },
             {
                 label: 'GitHub',
@@ -35,7 +38,8 @@ export default [
                 name: 'github',
                 id: 'github',
                 placeholder: 'Ingresa la URL de tu perfil de GitHub',
-                columns: 6
+                columns: 6,
+                containerClasses: 'w-6/12'
             },
             {
                 label: 'País',
@@ -44,7 +48,8 @@ export default [
                 id: 'country',
                 placeholder: 'Nombre del país en el que vives',
                 columns: 4,
-                required: true
+                required: true,
+                containerClasses: 'w-4/12'
             },
             {
                 label: 'Ciudad',
@@ -53,7 +58,8 @@ export default [
                 id: 'city',
                 placeholder: 'Nombre de la ciudad en la que vives',
                 columns: 4,
-                required: true
+                required: true,
+                containerClasses: 'w-4/12'
             },
             {
                 label: 'Celular',
@@ -62,7 +68,8 @@ export default [
                 id: 'phoneNumber',
                 placeholder: 'Número de celular',
                 columns: 4,
-                pattern: '[0-9]{9}'
+                pattern: '[0-9]{9}',
+                containerClasses: 'w-4/12'
             },
             {
                 label: 'Cuentanos algo adicional sobre ti',

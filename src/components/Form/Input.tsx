@@ -1,5 +1,4 @@
 import React from 'react';
-import { getColspan } from '../../helpers/classes';
 
 type InputProps = {
     label: string,
@@ -10,13 +9,13 @@ type InputProps = {
     required: boolean,
     dynamicClasses?: string,
     columns: number,
-    pattern?: string
+    pattern?: string,
+    containerClasses: string
 };
 
-const Input = ({ label, type, name, id, placeholder, required, dynamicClasses, columns, pattern }: InputProps) => {
-    const containerClasses = getColspan(columns);
+const Input = ({ label, type, name, id, placeholder, required, dynamicClasses, columns, pattern, containerClasses }: InputProps) => {
     return (
-        <div className={containerClasses}>
+        <div className={`inline-block px-2 pb-4 ${containerClasses}`}>
             <label htmlFor={id} className="block text-sm font-medium text-gray-700">
                 {label}
             </label>

@@ -1,5 +1,4 @@
 import React from 'react';
-import { getColspan } from '../../helpers/classes';
 
 type RadioProps = {
     label: string,
@@ -13,9 +12,8 @@ type RadioProps = {
 };
 
 const Input = ({ label, description, name, id, required, dynamicClasses, columns, options }: RadioProps) => {
-    const containerClasses = getColspan(columns);
     return (
-        <div className={containerClasses}>
+        <div className="w-full">
             <fieldset>
                 <legend className="contents text-base font-medium text-gray-900">{label}</legend>
                 <p className="text-sm text-gray-500">{description}</p>
