@@ -7,11 +7,11 @@ const Navbar = () => {
       <div className='flex flex-row justify-between'>
         <h5 className='text-lg font-bold'>Asistente de Postulación</h5>
         <div className='space-x-8'>
-          <Link href={'/'} className="text-indigo-600 hover:text-indigo-900">
+          <Link href={'/'}>
             Inicio
           </Link>
-          <Link href={'/wizard'} className="text-indigo-600 hover:text-indigo-900">
-            Asistente
+          <Link href={'/wizard'}>
+            Formularios
           </Link>
         </div>
       </div>

@@ -9,7 +9,7 @@ const Home: NextPage = () => {
         <title>Asistente - Inicio</title>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       </Head>
-      <div className="py-4 px-12 default-min-screen">
+      <div className="py-4 px-12 bg-gray-50 default-min-screen">
         <div>
           Index
         </div>
