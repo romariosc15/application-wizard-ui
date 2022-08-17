@@ -20,15 +20,15 @@ const WizardIndex: NextPage = () => {
                                 <div className="shadow sm:rounded-md sm:overflow-hidden">
                                     <div className='px-6 py-6 bg-white'>
                                         <div className="flex flex-column justify-between items-center">
-                                            <h5 className="text-2xl font-medium">
-                                                <Link href={`/wizard/${value.id}`}>
+                                            <Link href={`/wizard/${value.id}`}>
+                                                <h5 className="text-2xl font-medium">
                                                     {value.title}
-                                                </Link>
-                                            </h5>
+                                                </h5>
+                                            </Link>
                                             <Image src={value.logo} alt="me" width="56" height="32" />
                                         </div>
                                         <p className="text-normal text-gray-500">{value.author}</p>
-                                        <p className="text-lg mt-2">{`${value.description.substring(0, 120)} ${value.description.length > 120 ? '...' : ''}`}</p>
+                                        <p className="text-lg font-light mt-2">{`${value.description.substring(0, 120)} ${value.description.length > 120 ? '...' : ''}`}</p>
                                     </div>
                                 </div>
                             </div>
