@@ -3,10 +3,10 @@ import Link from 'next/link';
 
 const Navbar = () => {
   return (
-    <nav className='py-4 px-6 2xl:px-12 border-b'>
+    <nav className='py-4 px-6 lg:px-10 xl:px-12 border-b'>
       <div className='flex flex-row justify-between'>
-        <h5 className='text-base 2xl:text-lg font-bold'>Asistente de Postulación</h5>
-        <div className='space-x-8 hidden 2xl:block'>
+        <h5 className='text-base xl:text-lg font-bold'>Asistente de Postulación</h5>
+        <div className='space-x-8 hidden md:block text-sm xl:text-base'>
           <Link href={'/'}>
             Inicio
           </Link>
