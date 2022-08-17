@@ -23,6 +23,16 @@ const InputLayout = ({ columns, children }: InputLayoutProps) => (
             </div> : ''
         }
         {
+            columns===8 ? <div className="col-span-8">
+                {children}
+            </div> : ''
+        }
+        {
+            columns===9 ? <div className="col-span-9">
+                {children}
+            </div> : ''
+        }
+        {
             columns===12 ? <div className="col-span-12">
                 {children}
             </div> : ''

@@ -28,7 +28,7 @@ const Form = ({ title, order, fields, stepsLength }: FormProps) => {
     return(
         <div className={`px-4 pt-6 ${currentStep === order ? 'block' : 'hidden'}`}>
             <form onSubmit={nextStep}>
-                <div className="shadow sm:rounded-md sm:overflow-hidden">
+                <div className="shadow rounded-md sm:overflow-hidden">
                     <div className="px-4 py-5 bg-white space-y-6 sm:p-6">
                         <h2 className="text-2xl font-bold">{title}</h2>
                         <div className="grid grid-cols-12 gap-6">
