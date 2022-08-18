@@ -4,6 +4,7 @@ interface WizardDetail{
 const wizardDetailData:WizardDetail = {
     '2uvwxyz1': [
         {
+            id: '2uvwxyz1-1',
             title: 'Información Personal', 
             order: 1, 
             fields: [
@@ -80,6 +81,7 @@ const wizardDetailData:WizardDetail = {
             ],
         }, 
         {
+            id: '2uvwxyz1-2',
             title: 'Experiencia',
             order: 2,
             fields: [
@@ -131,6 +133,7 @@ const wizardDetailData:WizardDetail = {
             ]
         }, 
         {
+            id: '2uvwxyz1-3',
             title: 'Complementario',
             order: 3,
             fields: [

@@ -1,0 +1,41 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`steps array ordered by order property 1`] = `
+<div
+  className="flex flex-row justify-center items-center px-4 pb-6"
+>
+  <div
+    className="rounded-full border w-10 h-10 flex justify-center items-center border-indigo-500 text-white font-bold text-indigo-500 bg-white  "
+  >
+    <span
+      data-step-id="test-1"
+    >
+      1
+    </span>
+  </div>
+  <div
+    className="w-32 h-0.5 mx-2 bg-gray-200"
+  />
+  <div
+    className="rounded-full border w-10 h-10 flex justify-center items-center    text-gray-500 bg-white"
+  >
+    <span
+      data-step-id="test-3"
+    >
+      2
+    </span>
+  </div>
+  <div
+    className="w-32 h-0.5 mx-2 bg-gray-200"
+  />
+  <div
+    className="rounded-full border w-10 h-10 flex justify-center items-center    text-gray-500 bg-white"
+  >
+    <span
+      data-step-id="test-2"
+    >
+      3
+    </span>
+  </div>
+</div>
+`;
