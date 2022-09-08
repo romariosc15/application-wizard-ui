@@ -80,7 +80,7 @@ it('steps array ordered by order property', () => {
 
     const testInstance = component.root;
 
-    expect(testInstance.findByProps({"data-step-id": "test-3"}).props.children).toBe(2)
+    expect(testInstance.findByProps({"data-step-id": "test-3"}).props.children).toBe(2);
 
     let tree = component.toJSON();
     expect(tree).toMatchSnapshot();
