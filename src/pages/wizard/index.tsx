@@ -46,15 +46,15 @@ const WizardIndex: NextPage = () => {
         getApplicationForms();
     }, []);
     return (
-        <Layout>
+        <Layout navigation={true}>
             <Head>
                 <title>Asistente - Formularios</title>
                 <meta name="viewport" content="initial-scale=1.0, width=device-width" />
             </Head>
-            <div className={`py-12 px-6 2xl:px-12 bg-gray-50 default-min-screen ${loading && "flex justify-center items-center"}`}>
+            <div className={`py-12 px-6 md:px-12 lg:px-20 xl:px-28 2xl:px-36 bg-slate-100 default-min-screen ${loading && "flex justify-center items-center"}`}>
                 {
                     loading ? <Spinner /> :
-                    <div className="grid grid-cols-1 2xl:grid-cols-4 space-y-6 lg:space-y-0 lg:space-x-6">
+                    <div className="grid grid-cols-1 xl:grid-cols-3 gap-0 lg:gap-6">
                         {
                             applicationForms.map((value:any, index:number) => (
                                 <div className="shadow rounded-md sm:overflow-hidden bg-white" key={index}>
@@ -68,6 +68,7 @@ const WizardIndex: NextPage = () => {
                                             <img src={value.logo.url} alt="me" className="w-12 2xl:w-16" />
                                         </div>
                                         <p className="text-sm 2xl:text-base text-gray-500">{value.author}</p>
+                                        <div className='bg-indigo-600 w-10 h-1 rounded-md mt-2'></div>
                                         <p className="text-sm 2xl:text-base font-light mt-2">{`${value.description}`}</p>
                                     </div>
                                 </div>

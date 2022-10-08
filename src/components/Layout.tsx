@@ -4,16 +4,17 @@ import Navbar from './Navbar';
 import Footer from './Footer';
 
 type LayoutProps = {
-  children?: React.ReactNode
+  children?: React.ReactNode,
+  navigation: Boolean
 };
 
-const Layout = ({ children }: LayoutProps) => (
+const Layout = ({ children, navigation }: LayoutProps) => (
   <>
-    <Navbar />
+    {navigation && <Navbar /> }
       <div>
         {children}
       </div>
-    <Footer />
+    {navigation && <Footer /> }
   </>
 );
 

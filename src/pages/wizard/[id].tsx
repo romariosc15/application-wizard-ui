@@ -51,16 +51,16 @@ const Wizard: NextPage = () => {
     }
   }, [id]);
   return (
-    <Layout>
+    <Layout navigation={false}>
       <Head>
         <title>Asistente - Postulación</title>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       </Head>
-      <div className="py-4 px-12 bg-gray-50 default-min-screen flex justify-center items-center">
+      <div className={`py-4 px-12 bg-gray-50 h-screen ${loading && "flex justify-center items-center"}`}>
         {
           loading ? <Spinner /> :
           <WizardContextProvider>
-            <div className='w-6/12 mx-auto'>
+            <div className='w-6/12 mx-auto py-20'>
               <Steps
                 steps={applicationForm.steps}
               />
