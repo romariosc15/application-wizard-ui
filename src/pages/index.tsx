@@ -6,7 +6,7 @@ import Link from 'next/link';
 
 const Home: NextPage = () => {
   return (
-    <Layout navigation={false}>
+    <Layout navigation={true}>
       <Head>
         <title>Asistente - Inicio</title>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
