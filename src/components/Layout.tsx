@@ -5,7 +5,7 @@ import Footer from './Footer';
 
 type LayoutProps = {
   children?: React.ReactNode,
-  navigation: Boolean
+  navigation: boolean
 };
 
 const Layout = ({ children, navigation }: LayoutProps) => (
