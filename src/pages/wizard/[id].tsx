@@ -1,5 +1,6 @@
 import { WizardContextProvider } from '../../context/WizardContext';
 import type { NextPage } from 'next';
+import Link from 'next/link';
 import { useEffect, useState, Fragment } from 'react';
 import axios from 'axios';
 import { useRouter } from 'next/router';
@@ -60,24 +61,37 @@ const Wizard: NextPage = () => {
         {
           loading ? <Spinner /> :
           <WizardContextProvider>
-            <div className='h-full bg-gray-50 flex flex-col px-12 py-4'>
-              <div className="mb-auto flex justify-between">
-                <img src="/image/wizard/romario.png" className="w-16 xl:w-20"/>
-                <div>
-                  Lista
+            <div className='h-full bg-main flex flex-col'>
+              <div className="flex justify-between px-8 pt-4">
+                <Link href={'/'}>
+                  <a>
+                    <img src="/image/wizard/romario.png" className="w-16 xl:w-20"/>
+                  </a>
+                </Link>
+                <div className="space-x-4 flex flex-row items-center font-medium text-base">
+                  <a href="https://www.romariosarmiento.com" target="_blank" rel="noopener noreferrer">
+                    <img src="/image/icons/website.png" className="w-6 h-6"/>
+                  </a>
+                  <a href="https://www.linkedin.com/in/romariosarmiento/" target="_blank" rel="noopener noreferrer">
+                    <img src="/image/icons/linkedin.png" className="w-6 h-6"/>
+                  </a>
                 </div>
               </div>
-              <div className="mb-auto flex flex-col items-center justify-center space-y-3">
-                <img src="/image/wizard/wizard_left_central_image.png" className="w-64 xl:w-80"/>
-                <h1 className="text-2xl font-semibold">{applicationForm.author}</h1>
-                <p className="text-center text-base">{applicationForm.description}</p>
+              <div className="my-auto flex flex-col items-center justify-center px-12">
+                <img src="/image/wizard/wizard_left_central_image.png" className="w-96"/>
+                <h1 className="text-4xl font-bold text-black mt-6">{applicationForm.author}</h1>
+                <p className="text-center text-base text-gray-600 mt-3">{applicationForm.description}</p>
               </div>
-              
+              <div className="px-8 py-6 text-center font-normal text-base text-gray-500">
+                2022. Desarrollado por Jaime Sarmiento
+              </div>
             </div>
-            <div className='col-span-2 h-full flex flex-col items-center justify-center px-12'>
-              <Steps
-                steps={applicationForm.steps}
-              />
+            <div className='col-span-2 h-full flex flex-col items-center justify-center px-16'>
+              <div className="mb-8">
+                <Steps
+                  steps={applicationForm.steps}
+                />
+              </div>
               {
                 applicationForm.steps.map((value:any, index:number) => (
                   <Fragment key={index}>
@@ -97,7 +111,6 @@ const Wizard: NextPage = () => {
                 error && <WizardError stepsLength={applicationForm.steps.length} />
               }
             </div>
-
           </WizardContextProvider>
         }
       </div>
