@@ -7,12 +7,11 @@ type RadioProps = {
     name: string,
     id: string,
     required: boolean,
-    dynamicClasses?: string,
     columns: number,
     options: any[]
 };
 
-const Input = ({ label, description, name, id, required, dynamicClasses, columns, options }: RadioProps) => {
+const Input = ({ label, description, name, id, required, columns, options }: RadioProps) => {
     return (
         <InputLayout columns={columns}>
             <fieldset>
@@ -27,7 +26,7 @@ const Input = ({ label, description, name, id, required, dynamicClasses, columns
                                     name={name}
                                     type="radio"
                                     value={value.value}
-                                    className="focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300"
+                                    className="focus:ring-black h-4 w-4 text-black border-gray-300"
                                     required={required}
                                 />
                                 <label htmlFor="push-everything" className="ml-3 block text-sm font-medium text-gray-700">

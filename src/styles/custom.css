@@ -1,3 +1,15 @@
 .default-min-screen{
     min-height: 89vh;
 }
+.bg-main{
+    background-color: #F3F7F5;
+}
+.border-active-step{
+    border-color: #FFBE16;
+}
+.text-active-step{
+    color: #FFBE16;
+}
+.bg-active-step{
+    background-color: #FFBE16;
+}

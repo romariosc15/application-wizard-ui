@@ -26,12 +26,13 @@ const Form = ({ title, order, fields, stepsLength }: FormProps) => {
     const previousStep = () => setCurrentStep(currentStep - 1);
 
     return(
-        <div className={`px-4 pt-6 ${currentStep === order ? 'block' : 'hidden'}`}>
+        <div className={`w-6/12 ${currentStep === order ? 'block' : 'hidden'}`}>
             <form onSubmit={nextStep}>
-                <div className="shadow rounded-md sm:overflow-hidden">
-                    <div className="px-4 py-5 bg-white space-y-6 sm:p-6">
+                <div className="">
+                    <div className="bg-white">
                         <h2 className="text-2xl font-bold">{title}</h2>
-                        <div className="grid grid-cols-12 gap-6">
+                        <h3 className="text-base text-gray-600 mb-4">Paso {currentStep}</h3>
+                        <div className="grid grid-cols-12 gap-6 border-b-2 border-b-gray-200 pb-8">
                             {
                                 fields?.map((value, index:number) => {
                                     if(value.type === 'text' || value.type === 'url' || value.type === 'tel' || value.type === 'number')
@@ -78,7 +79,7 @@ const Form = ({ title, order, fields, stepsLength }: FormProps) => {
                             }
                         </div>
                     </div>
-                    <div className="px-4 py-3 bg-gray-50 text-right sm:px-6 flex justify-between">
+                    <div className="mt-6 text-right flex justify-between">
                         {
                             <Button
                                 label='Anterior'

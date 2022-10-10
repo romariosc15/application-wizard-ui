@@ -22,12 +22,12 @@ const Steps = ({ steps }: StepsProps) => {
   const stepsLength:number = steps.length - 1;
   const { currentStep } = useContext(WizardContext);
   return (
-    <div className='flex flex-row justify-center items-center px-4 pb-6'>
+    <div className='flex flex-row justify-center items-center'>
         {
           orderedSteps?.map((value, index:number) => {
             const className = 'rounded-full border w-10 h-10 flex justify-center items-center';
-            const dynamicClasses = `${(currentStep >= value.order) ? 'border-indigo-500 text-white' : ''} ${currentStep === value.order ? 'font-bold text-indigo-500 bg-white' : ''} ${currentStep > value.order ? 'bg-indigo-300 font-semibold bg-indigo-500' : ''} ${currentStep < value.order ? 'text-gray-500 bg-white' : ''}`;
-            const separatorDynamicClasses = `${currentStep > value.order ? 'bg-indigo-500' : 'bg-gray-200'}`;
+            const dynamicClasses = `${(currentStep >= value.order) ? 'border-active-step text-white' : ''} ${currentStep === value.order ? 'font-bold text-active-step bg-white' : ''} ${currentStep > value.order ? 'bg-active-step font-semibold' : ''} ${currentStep < value.order ? 'text-gray-500 bg-white' : ''}`;
+            const separatorDynamicClasses = `${currentStep > value.order ? 'bg-active-step' : 'bg-gray-200'}`;
             return (
               <Fragment key={index}>
                 <div
