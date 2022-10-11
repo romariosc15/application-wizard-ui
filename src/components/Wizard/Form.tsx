@@ -26,7 +26,7 @@ const Form = ({ title, order, fields, stepsLength }: FormProps) => {
     const previousStep = () => setCurrentStep(currentStep - 1);
 
     return(
-        <div className={`w-6/12 ${currentStep === order ? 'block' : 'hidden'}`}>
+        <div className={`w-full lg:w-6/12 ${currentStep === order ? 'block' : 'hidden'}`}>
             <form onSubmit={nextStep}>
                 <div className="">
                     <div className="bg-white">
