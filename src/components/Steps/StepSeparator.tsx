@@ -9,7 +9,7 @@ type StepSeparatorProps = {
 const StepSeparator = ({ stepsLength, index, dynamicClasses }: StepSeparatorProps) => {
   return (
     <>
-      {stepsLength > index ? <div className={`w-32 h-0.5 mx-2 ${dynamicClasses}`}></div>: <></>}
+      {stepsLength > index ? <div className={`w-20 lg:w-32 h-0.5 mx-3 lg:mx-2 ${dynamicClasses}`}></div>: <></>}
     </>
   );
 };

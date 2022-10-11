@@ -8,27 +8,27 @@ type InputLayoutProps = {
 const InputLayout = ({ columns, children }: InputLayoutProps) => (
     <Fragment>
         {
-            columns===3 ? <div className="col-span-3">
+            columns===3 ? <div className="col-span-12 lg:col-span-3">
                 {children}
             </div> : ''
         }
         {
-            columns===4 ? <div className="col-span-4">
+            columns===4 ? <div className="col-span-12 lg:col-span-4">
                 {children}
             </div> : ''
         }
         {
-            columns===6 ? <div className="col-span-6">
+            columns===6 ? <div className="col-span-12 lg:col-span-6">
                 {children}
             </div> : ''
         }
         {
-            columns===8 ? <div className="col-span-8">
+            columns===8 ? <div className="col-span-12 lg:col-span-8">
                 {children}
             </div> : ''
         }
         {
-            columns===9 ? <div className="col-span-9">
+            columns===9 ? <div className="col-span-12 lg:col-span-9">
                 {children}
             </div> : ''
         }

@@ -61,7 +61,7 @@ const Wizard: NextPage = () => {
         {
           loading ? <Spinner /> :
           <WizardContextProvider>
-            <div className='h-full bg-main flex flex-col'>
+            <div className='h-full bg-main flex flex-col col-span-3 lg:col-span-1'>
               <div className="flex justify-between px-8 pt-4">
                 <Link href={'/'}>
                   <a>
@@ -77,16 +77,16 @@ const Wizard: NextPage = () => {
                   </a>
                 </div>
               </div>
-              <div className="my-auto flex flex-col items-center justify-center px-12">
+              <div className="my-auto flex flex-col items-center justify-center text-center px-8 lg:px-12 py-8 lg:py-0">
                 <img src="/image/wizard/wizard_left_central_image.png" className="w-96"/>
-                <h1 className="text-4xl font-bold text-black mt-6">{applicationForm.author}</h1>
-                <p className="text-center text-base text-gray-600 mt-3">{applicationForm.description}</p>
+                <h1 className="text-3xl lg:text-4xl font-bold text-black mt-6">{applicationForm.author}</h1>
+                <p className="text-sm lg:text-base text-gray-600 mt-3">{applicationForm.description}</p>
               </div>
-              <div className="px-8 py-6 text-center font-normal text-base text-gray-500">
+              <div className="px-8 lg:px-12 py-6 text-center font-normal text-sm lg:text-base text-gray-500">
                 2022. Desarrollado por Jaime Sarmiento
               </div>
             </div>
-            <div className='col-span-2 h-full flex flex-col items-center justify-center px-16'>
+            <div className='col-span-3 lg:col-span-2 h-full flex flex-col items-center justify-center px-8 lg:px-16 py-8 lg:py-0'>
               <div className="mb-8">
                 <Steps
                   steps={applicationForm.steps}
