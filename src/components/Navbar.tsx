@@ -3,9 +3,13 @@ import Link from 'next/link';
 
 const Navbar = () => {
   return (
-    <nav className='py-5 px-6 px-6 md:px-12 lg:px-20 xl:px-28 2xl:px-36'>
+    <nav className='py-4 lg:py-5 px-8 md:px-12 lg:px-20 xl:px-28 2xl:px-36'>
       <div className='flex flex-row justify-between items-center'>
-        <h5 className='text-base xl:text-xl font-bold text-slate-800'>Asistente de Postulación</h5>
+        <Link href={'/'}>
+          <a>
+            <img src="/image/wizard/romario.png" className="w-16"/>
+          </a>
+        </Link>
         <div className='space-x-10 hidden md:block text-sm xl:text-base font-medium text-slate-800'>
           <Link href={'/'}>
             Inicio

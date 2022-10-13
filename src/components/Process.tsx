@@ -1,7 +1,7 @@
 
 const Process = () => {
     return (
-        <div className="grid grid-cols-3 gap-0 lg:gap-8">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-12">
             <div className="space-y-3 lg:space-y-4 text-center">
                 <div className="mx-auto rounded-full border border-black text-lg font-bold w-12 h-12 flex flex-col justify-center items-center bg-rose-200">
                     1

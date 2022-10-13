@@ -12,7 +12,7 @@ const Home: NextPage = () => {
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       </Head>
       <div className="bg-slate-100">
-        <div className="flex flex-row justify-between items-center py-12 lg:py-16 xl:py-20 2xl:py-28 px-6 md:px-12 lg:px-20 xl:px-28 2xl:px-36">
+        <div className="flex flex-row justify-between items-center py-12 lg:py-16 xl:py-20 2xl:py-28 px-8 md:px-12 lg:px-20 xl:px-28 2xl:px-36">
           <div className="">
             <h1 className="mb-4 text-2xl lg:text-3xl xl:text-4xl 2xl:text-5xl font-extrabold text-slate-800">Gestiona dinámicamente <br className="hidden md:block" /> tus formularios</h1>
             <p className="mb-4 text-sm lg:text-base xl:text-lg 2xl:text-xl font-normal text-gray-600">Crea, edita y publica formularios con preguntas personalizadas <br className="hidden lg:block xl:hidden" /> para iniciar con <br className="hidden xl:block" /> las postulaciones a tu oferta de trabajo</p>
@@ -23,7 +23,7 @@ const Home: NextPage = () => {
               <p className="text-xs 2xl:text-sm font-normal text-gray-600">Recursos y contenido obtenidos de</p>
               <div className="flex flex-row space-x-4">
                 <img src="/image/providers/freepik.png" className="w-16 xl:w-20"/>
-                <img src="/image/providers/contentful.png" className="w-16 xl:w-24"/>
+                <img src="/image/providers/contentful.png" className="w-20 xl:w-24"/>
               </div>
             </div>
           </div>
@@ -31,7 +31,7 @@ const Home: NextPage = () => {
             <img src="/image/wizard/home_1.png" width="400px"/>
           </div>
         </div>
-        <div className="bg-white py-12 lg:py-16 xl:py-20 2xl:py-24 px-6 md:px-24 lg:px-20 xl:px-28 2xl:px-36">
+        <div className="bg-white py-12 lg:py-16 xl:py-20 2xl:py-24 px-8 md:px-24 lg:px-20 xl:px-28 2xl:px-36">
           <Process />
         </div>
       </div>
