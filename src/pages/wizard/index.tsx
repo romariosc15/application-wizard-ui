@@ -1,6 +1,6 @@
 import type { NextPage } from 'next';
-import { useEffect, useState } from 'react';
-import axios from 'axios';
+import { useState, useEffect } from 'react';
+import useAxios from '../../hooks/useAxios';
 import Layout from '../../components/Layout';
 import Spinner from '../../components/Spinner';
 import Head from 'next/head';
@@ -11,40 +11,24 @@ const WizardIndex: NextPage = () => {
     {
         applicationFormCollection {
             items {
-            sys{
-                id
-            }
-            title
-            description
-            author
-            logo {
-                url
-            }
+                sys{
+                    id
+                }
+                title
+                description
+                author
+                logo {
+                    url
+                }
             }
         }
     }
     `;
     const [applicationForms, setApplicationForms] = useState([]);
-    const [error, setError] = useState(false);
-    const [loading, setLoading] = useState(true);
+    const { response, error, loading } = useAxios(`https://graphql.contentful.com/content/v1/spaces/${process.env.contentfulSpace}/`, { query }, true, {data: {applicationFormCollection: {items: []}}});
     useEffect(() => {
-        const getApplicationForms = async () => {
-        try {
-            const response = await axios.post(`https://graphql.contentful.com/content/v1/spaces/${process.env.contentfulSpace}/`, { query }, {
-                headers: {
-                "Content-Type": "application/json",
-                Authorization: process.env.contentfulToken || "",
-                }
-            });
-            setApplicationForms(response.data.data.applicationFormCollection.items);
-        } catch (error) {
-            setError(true);
-        } finally {
-            setLoading(false);
-        }
-        };
-        getApplicationForms();
-    }, []);
+        setApplicationForms(response.data.applicationFormCollection.items);
+    }, [response]);
     return (
         <Layout navigation={true}>
             <Head>
@@ -61,11 +45,11 @@ const WizardIndex: NextPage = () => {
                                     <div className='px-5 lg:px-6 py-5 lg:py-6'>
                                         <div className="flex flex-row justify-between items-center">
                                             <h5 className="text-lg lg:text-2xl font-medium">
-                                                <Link href={`/wizard/${value.sys.id}`}>
-                                                    {value.title}
-                                                </Link>
+                                                {value.title}
                                             </h5>
-                                            <img src={value.logo.url} alt="me" className="w-12 lg:w-16" />
+                                            <Link href={`/wizard/${value.sys.id}`}>
+                                                <a className="hover:opacity-75 transition-opacity duration-300">Ver formulario</a>
+                                            </Link>
                                         </div>
                                         <p className="text-sm lg:text-base text-gray-500">{value.author}</p>
                                         <div className='bg-indigo-600 w-10 h-1 rounded-md mt-2'></div>

@@ -1,10 +1,13 @@
 import { WizardContextProvider } from '../../context/WizardContext';
+import useAxios from '../../hooks/useAxios';
+
 import type { NextPage } from 'next';
 import Link from 'next/link';
-import { useEffect, useState, Fragment } from 'react';
-import axios from 'axios';
 import { useRouter } from 'next/router';
 import Head from 'next/head';
+
+import { useEffect, useState, Fragment } from 'react';
+
 import Layout from '../../components/Layout';
 import Steps from '../../components/Steps';
 import WizardForm from '../../components/Wizard/Form';
@@ -28,29 +31,14 @@ const Wizard: NextPage = () => {
     }
   }
   `;
+
   const [applicationForm, setApplicationForm] = useState({steps: [], author: "", description: ""});
-  const [error, setError] = useState(false);
-  const [loading, setLoading] = useState(true);
+  const { response, error, loading } = useAxios(`https://graphql.contentful.com/content/v1/spaces/${process.env.contentfulSpace}/`, { query }, id, {data: {applicationForm: {steps: [], author: "", description: ""}}});
+
   useEffect(() => {
-    const getApplicationForm = async () => {
-      try {
-        const response = await axios.post(`https://graphql.contentful.com/content/v1/spaces/${process.env.contentfulSpace}/`, { query }, {
-          headers: {
-            "Content-Type": "application/json",
-            Authorization: process.env.contentfulToken || "",
-          }
-        });
-        setApplicationForm(response.data.data.applicationForm);
-      } catch (error) {
-        setError(true);
-      } finally {
-        setLoading(false);
-      }
-    };
-    if(id){
-      getApplicationForm();
-    }
-  }, [id]);
+    setApplicationForm(response.data.applicationForm);
+  }, [response]);
+
   return (
     <Layout navigation={false}>
       <Head>
@@ -65,15 +53,15 @@ const Wizard: NextPage = () => {
               <div className="flex justify-between px-8 pt-4">
                 <Link href={'/'}>
                   <a>
-                    <img src="/image/wizard/romario.png" className="w-16 xl:w-20"/>
+                    <img src="/image/wizard/romario.png" className="w-16 lg:w-20"/>
                   </a>
                 </Link>
                 <div className="space-x-4 flex flex-row items-center font-medium text-base">
                   <a href="https://www.romariosarmiento.com" target="_blank" rel="noopener noreferrer">
-                    <img src="/image/icons/website.png" className="w-6 h-6"/>
+                    <img src="/image/icons/website.png" className="w-6 h-6 hover:opacity-75 transition-opacity duration-300"/>
                   </a>
                   <a href="https://www.linkedin.com/in/romariosarmiento/" target="_blank" rel="noopener noreferrer">
-                    <img src="/image/icons/linkedin.png" className="w-6 h-6"/>
+                    <img src="/image/icons/linkedin.png" className="w-6 h-6 hover:opacity-75 transition-opacity duration-300"/>
                   </a>
                 </div>
               </div>
