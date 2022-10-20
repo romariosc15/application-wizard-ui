@@ -22,7 +22,7 @@ const Navbar = () => {
             </a>
           </Link>
         </div>
-        <div className="block md:block">
+        <div className="block md:hidden">
           <img src="/image/icons/bars.png" className="w-6"/>
         </div>
       </div>
