@@ -3,16 +3,27 @@ import Link from 'next/link';
 
 const Navbar = () => {
   return (
-    <nav className='py-5 px-6 px-6 md:px-12 lg:px-20 xl:px-28 2xl:px-36'>
+    <nav className='py-4 px-8 md:px-12 lg:px-20 xl:px-28 2xl:px-36'>
       <div className='flex flex-row justify-between items-center'>
-        <h5 className='text-base xl:text-xl font-bold text-slate-800'>Asistente de Postulación</h5>
-        <div className='space-x-10 hidden md:block text-sm xl:text-base font-medium text-slate-800'>
+        <Link href={'/'}>
+          <a>
+            <img src="/image/wizard/romario.png" className="w-16 lg:w-20"/>
+          </a>
+        </Link>
+        <div className='space-x-10 hidden md:block text-sm lg:text-base font-medium text-black'>
           <Link href={'/'}>
-            Inicio
+            <a className="hover:opacity-80 transition-opacity duration-300">
+              Inicio
+            </a>
           </Link>
           <Link href={'/wizard'}>
-            Formularios
+            <a className="hover:opacity-80 transition-opacity duration-300">
+              Formularios
+            </a>
           </Link>
+        </div>
+        <div className="block md:block">
+          <img src="/image/icons/bars.png" className="w-6"/>
         </div>
       </div>
     </nav>
