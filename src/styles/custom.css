@@ -4,12 +4,21 @@
 .bg-main{
     background-color: #F3F7F5;
 }
-.border-active-step{
+.bg-alternative{
+    background-color: #e5f1eb;
+}
+.border-yellow, .border-active-step{
     border-color: #FFBE16;
 }
 .text-active-step{
     color: #FFBE16;
 }
-.bg-active-step{
+.bg-yellow, .bg-active-step{
     background-color: #FFBE16;
+}
+.bg-green{
+    background-color: #9cd161;
+}
+.bg-rose{
+    background-color: #ff98d0;
 }

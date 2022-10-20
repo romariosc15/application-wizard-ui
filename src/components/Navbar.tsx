@@ -10,7 +10,7 @@ const Navbar = () => {
             <img src="/image/wizard/romario.png" className="w-16 lg:w-20"/>
           </a>
         </Link>
-        <div className='space-x-10 hidden md:block text-sm lg:text-lg font-medium text-slate-800'>
+        <div className='space-x-10 hidden md:block text-sm lg:text-base font-medium text-black'>
           <Link href={'/'}>
             <a className="hover:opacity-80 transition-opacity duration-300">
               Inicio
@@ -21,6 +21,9 @@ const Navbar = () => {
               Formularios
             </a>
           </Link>
+        </div>
+        <div className="block md:block">
+          <img src="/image/icons/bars.png" className="w-6"/>
         </div>
       </div>
     </nav>
